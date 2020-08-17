@@ -46,8 +46,8 @@ def frequencia (c):
 
 # Variaveis globais
 c = 3 * (10**8) #velocidade da luz em m/s
-h = 6.26 * (10**-34) #constante de planck em J . s 
-e = 1.6 * (10**-19) #carga elementar em C
+h = 6.6226 * (10**-34) #constante de planck em J . s 
+e = 1.602 * (10**-19) #carga elementar em C
 
 def main ():
     while True:

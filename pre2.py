@@ -45,7 +45,9 @@ def frequencia (c):
     print("Frequecia da onda: %.2e Hz" % frequencia)
 
 # Variaveis globais
-c = 299792458
+c = 3 * (10**8) #velocidade da luz em m/s
+h = 6.26 * (10**-34) #constante de planck em J . s 
+e = 1.6 * (10**-19) #carga elementar em C
 
 def main ():
     while True:

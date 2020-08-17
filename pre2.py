@@ -6,17 +6,17 @@ def comprimento (c):
         if op == 1:
             f = float(input("Digite a frequencia em Hz: "))
             os.system('cls' if os.name == 'nt' else 'clear')
-            print("Comprimento de onda = %.2f m" % (c/f))
+            print("Comprimento de onda = %.2e m" % (c/f))
             break
         elif op == 2:
             f = float(input("Digite a frequencia em Hz: "))
             os.system('cls' if os.name == 'nt' else 'clear')
-            print("Comprimento de onda = %.2f mm" % (c/f) * (10**3))
+            print("Comprimento de onda = %.2e mm" % ((c/f)*(10**3)))
             break
-        elif op == 2:
+        elif op == 3:
             f = float(input("Digite a frequencia em Hz: "))
             os.system('cls' if os.name == 'nt' else 'clear')
-            print("Comprimento de onda = %.2f nm" % (c/f) * (10**9))
+            print("Comprimento de onda = %.2e nm" % ((c/f)*(10**9)))
             break
 
 def frequencia (c):
@@ -42,7 +42,7 @@ def frequencia (c):
            print("Opcao invalida! Digite uma opcao valida")
     frequencia = c/co
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("Frequecia da onda: %.2f Hz" % frequencia)
+    print("Frequecia da onda: %.2e Hz" % frequencia)
 
 # Variaveis globais
 c = 299792458

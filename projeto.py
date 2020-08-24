@@ -1,21 +1,51 @@
 import os
 
+def sep():
+    print("\n===================================\n")
+
 def comprimento (c):
     while True:
         f = float(input("Digite a frequencia em Hz: "))
-        if f > 0.5:
+        if f > 0.3:
             os.system('cls' if os.name == 'nt' else 'clear')
             print("Comprimento de onda = %.2e m" % (c/f))
+            print("Tipo de onda: onda de radio")
             break
-        elif f > (10**-3) or f < 0.5:
+        elif f > (10**-3) or f < 0.3:
             f = float(input("Digite a frequencia em Hz: "))
             os.system('cls' if os.name == 'nt' else 'clear')
             print("Comprimento de onda = %.2e mm" % ((c/f)*(10**3)))
+            print("Tipo de onda: micro-onda")
             break
-        elif f < (10**-3):
+        elif f > 7*(10**-7) or f < (10**-3):
             f = float(input("Digite a frequencia em Hz: "))
             os.system('cls' if os.name == 'nt' else 'clear')
             print("Comprimento de onda = %.2e nm" % ((c/f)*(10**9)))
+            print("Tipo de onda: infravermelho")
+            break
+        elif f > 7*(10**-7) or f < 4*(10**-7):
+            f = float(input("Digite a frequencia em Hz: "))
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("Comprimento de onda = %.2e nm" % ((c/f)*(10**9)))
+            print("Tipo de onda: luz visivel")
+            break
+        elif f > 4*(10**-7) or f < 3*(10**-8):
+            f = float(input("Digite a frequencia em Hz: "))
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("Comprimento de onda = %.2e nm" % ((c/f)*(10**9)))
+            print("Tipo de onda: ultravioleta")
+            break
+        elif f > 3*(10**-8) or f < 3*(10**-11):
+            f = float(input("Digite a frequencia em Hz: "))
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("Comprimento de onda = %.2e nm" % ((c/f)*(10**9)))
+            print("Tipo de onda: raio-x")
+            break
+        elif f < 3 * (10**-11):
+            f = float(input("Digite a frequencia em Hz: "))
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("Comprimento de onda = %.2e nm" % ((c/f)*(10**9)))
+            print("Tipo de onda: raio gama")
             break
 
 def frequencia (c):
@@ -60,7 +90,7 @@ def main ():
         else:
             os.system('cls' if os.name == 'nt' else 'clear') 
             print("Opcao invalida! Escolha uma das opcoes")
-
+        sep()
 
 if __name__ == "__main__":
     main()

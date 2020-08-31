@@ -3,26 +3,17 @@ import os
 def sep():
     print("\n=======================================\n")
 
-def calculoCampo (c):
-    while True:
-        print("Escola entre campo eletrcio maximo ou campo magnetico maximo")
-        op = int(input("1 - Campo eletrico maximo\n2 - Campo magnetico maximo\nEscolha: "))
-        if op == 1:
-            cmMax = float(input("Digite o valor do campo magnetico maximo em T: "))
-            os.system('cls' if os.name == 'nt' else 'clear')
-            ceMax = c * cmMax
-            print("Campo eletrico maximo: %.2e V/m" %ceMax)
-            break
-        elif op == 2:
-            ceMax = float(input("Digite o valor do campo eletrico maximo em V/m: "))
-            os.system('cls' if os.name == 'nt' else 'clear')
-            cmMax = ceMax/c
-            print("Campo magentico maximo: %.2e T" %cmMax)
-            break
-        else:
-            os.system('cls' if os.name == 'nt' else 'clear')
-            print("Opcao invalida! Digite uma opcao valida")
+def campoMagMax (c):
+    ceMax = float(input("Digite o valor do campo eletrico maximo em V/m: "))
+    os.system('cls' if os.name == 'nt' else 'clear')
+    cmMax = ceMax/c
+    print("Campo magentico maximo: %.2e T" %cmMax)
 
+def campoEleMax (c):
+    cmMax = float(input("Digite o valor do campo magnetico maximo em T: "))
+    os.system('cls' if os.name == 'nt' else 'clear')
+    ceMax = c * cmMax
+    print("Campo eletrico maximo: %.2e V/m" %ceMax)
 
 def comprimento (c):
     while True:
@@ -120,13 +111,15 @@ e = 1.602 * (10**-19) #carga elementar em C
 
 def main ():
     while True:
-        op = int(input("Escolha o calculo ou saia:\n1 - Frequencia\n2 - Comprimento de onda:\n3 - Campo magentico ou eletrico maximo\n0 - Sair\nEscolha:  "))
+        op = int(input("Escolha o calculo ou saia:\n1 - Frequencia\n2 - Comprimento de onda:\n3 - Campo magentico maximo\n4 - Campo eletrico maximo\n0 - Sair\nEscolha:  "))
         if op == 1:
             frequencia(c)
         elif op == 2:
             comprimento(c)
         elif op == 3:
-            calculoCampo(c)
+            campoMagMax(c)
+        elif op == 4:
+            campoEleMax(c)
         elif op == 0:
             break
         else:

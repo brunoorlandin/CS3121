@@ -7,7 +7,7 @@ def campoMagMax (c):
     ceMax = float(input("Digite o valor do campo eletrico maximo em V/m: "))
     os.system('cls' if os.name == 'nt' else 'clear')
     cmMax = ceMax/c
-    print("Campo magentico maximo: %.2e T" %cmMax)
+    print("Campo magnetico maximo: %.2e T" %cmMax)
 
 def campoEleMax (c):
     cmMax = float(input("Digite o valor do campo magnetico maximo em T: "))
@@ -111,7 +111,7 @@ e = 1.602 * (10**-19) #carga elementar em C
 
 def main ():
     while True:
-        op = int(input("Escolha o calculo ou saia:\n1 - Frequencia\n2 - Comprimento de onda:\n3 - Campo magentico maximo\n4 - Campo eletrico maximo\n0 - Sair\nEscolha:  "))
+        op = int(input("Escolha o calculo ou saia:\n1 - Frequencia\n2 - Comprimento de onda:\n3 - Campo magnetico maximo\n4 - Campo eletrico maximo\n0 - Sair\nEscolha:  "))
         if op == 1:
             frequencia(c)
         elif op == 2:

@@ -71,7 +71,26 @@ def frequencia (c):
            print("Opcao invalida! Digite uma opcao valida")
     frequencia = c/co
     os.system('cls' if os.name == 'nt' else 'clear')
+    
+    tipoDeOnda = ""
+
+    if frequencia > (10**19):
+        tipoDeOnda = "raio gama"
+    elif frequencia > (10**16):
+        tipoDeOnda = "raio X"
+    elif frequencia > (7.5 * (10**14)):
+        tipoDeOnda = "ultravioleta"
+    elif frequencia > (4.28 * (10**14)):
+        tipoDeOnda = "luz visivel"       
+    elif frequencia > (3 * (10**11)):
+        tipoDeOnda = "infravermelho"
+    elif frequencia > (10**9):
+        tipoDeOnda = "micro-onda"
+    else:
+        tipoDeOnda = "onda de radio"
+
     print("Frequecia da onda: %.2e Hz" % frequencia)
+    print("Tipo de onda: %s" %tipoDeOnda)
 
 # Variaveis globais
 c = 3 * (10**8) #velocidade da luz em m/s

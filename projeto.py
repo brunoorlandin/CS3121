@@ -1,7 +1,7 @@
 import os
 
 def sep():
-    print("\n===================================\n")
+    print("\n=======================================\n")
 
 def calculoCampo (c):
     while True:

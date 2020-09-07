@@ -5,17 +5,20 @@ def sep():
     print("\n===========================================\n")
 
 def classificaOnda(c):
-    op = int(input("Entre com: \n1 - Numero de onda\n2 - Frequencia angular\nEscolha: "))
-    if op == 1:
-        no = float(input("Numero de onda (em rad/m): "))
-        comprimento = (2 * math.pi)/no
-        frequencia = (2 * math.pi * c)/no
-    elif op == 2:
-        fa = float(input("Frequencia angular (em rad/s): "))
-        frequencia = fa/(2 * math.pi)
-        comprimento = (fa * c)/(2 * math.pi)
-    else:
-        print("Opcao invalida! Digite uma opcao valida.")
+    while True:
+        op = int(input("Entre com: \n1 - Numero de onda\n2 - Frequencia angular\nEscolha: "))
+        if op == 1:
+            no = float(input("Numero de onda (em rad/m): "))
+            comprimento = (2 * math.pi)/no
+            frequencia = (2 * math.pi * c)/no
+            break
+        elif op == 2:
+            fa = float(input("Frequencia angular (em rad/s): "))
+            frequencia = fa/(2 * math.pi)
+            comprimento = (fa * c)/(2 * math.pi)
+            break
+        else:
+            print("Opcao invalida! Digite uma opcao valida.")
 
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Frequencia: %.2e Hz" %frequencia)

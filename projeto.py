@@ -18,6 +18,7 @@ def classificaOnda(c):
             comprimento = (fa * c)/(2 * math.pi)
             break
         else:
+            os.system('cls' if os.name == 'nt' else 'clear')
             print("Opcao invalida! Digite uma opcao valida.")
 
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -46,17 +47,21 @@ def classificaOnda(c):
         print("Tipo de onda: raio gama")
 
 def numeroOnda (c):
-    op = int(input("Escolha:\n1 - Frequencia\n2 - Comprimento de onda\nEscolha:  "))
-    if op == 1:
-        f = float(input("Digite a freuquencia em Hz: "))
-        no = (2 * math.pi * c)/f
-        fa = 2 * math.pi * f
-    elif op == 2:
-        co = float(input("Digite o comprimento de onda em m: "))
-        no = (2 * math.pi)/co
-        fa = (2 * math.pi * co)/c
-    else:
-        print("Opcao invalida! Digite uma opcao valida.")
+    while True:
+        op = int(input("Entre com:\n1 - Frequencia\n2 - Comprimento de onda\nEscolha:  "))
+        if op == 1:
+            f = float(input("Digite a freuquencia em Hz: "))
+            no = (2 * math.pi * c)/f
+            fa = 2 * math.pi * f
+            break
+        elif op == 2:
+            co = float(input("Digite o comprimento de onda em m: "))
+            no = (2 * math.pi)/co
+            fa = (2 * math.pi * co)/c
+            break
+        else:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("Opcao invalida! Digite uma opcao valida.")
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Numero de onda: %.2e rad/m" %no)
     print("Frequencia angular: %.2e rad/s" %fa)
